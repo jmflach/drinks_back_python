@@ -23,15 +23,13 @@ drinks/(:num)               | DELETE    | Deleta drink cujo id é (:num)
 1. Clone este repositório e, na pasta raiz, execute o seguinte comando para instalar as dependências necessárias do projeto:
 
     ```
-    > mvn clean install
+    > pip install -r requirements.txt
     ```
 
-2. Modifique o **application.properties** com as configurações do banco de dados que você criou, como mostrado em [Banco de Dados](#banco-de-dados).
-
-3. Após instalado e configurado, basta você dar o seguinte comando para subir o servidor:
+2. Agora, basta você dar o seguinte comando para subir o servidor:
 
     ```
-    > mvn spring-boot:run
+    > python manage.py runserver
     ```
 
 ## Melhorias
@@ -41,4 +39,3 @@ O sistema está realizando todas as operações propostas, porém existem alguma
 * Adicionar autenticação
     * Atualmente qualquer usuário pode efetuar as chamadas na API, sem qualquer autenticação.
 * Melhorar error handling quando o body da chamada não possui os campos esperados.
-* Tirar as informações sensíveis do arquivo **application.properties** do repositório público.
